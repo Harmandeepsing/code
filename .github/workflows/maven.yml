@@ -38,8 +38,8 @@ jobs:
         target: "/home/ubuntu/"
         
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
-    - uses: qoqa/action-s3-cp@v1.1
+    #  uses: aws-actions/configure-aws-credentials@v1
+      uses: qoqa/action-s3-cp@v1.1
       env:
         AWS_DEFAULT_REGION: ap-south-1
         AWS_S3_BUCKET: 'buc121'
