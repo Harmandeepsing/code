@@ -23,8 +23,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      working-directory: github-actions-java-maven
       run: mvn -B package --file pom.xml -DskipTests
+    - name: pwd
+      run: pwd
     - name: Upload Maven build artifact
       uses: actions/upload-artifact@v2
       with:
