@@ -47,4 +47,4 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_KEY }}
         AWS_REGION: ap-south-1
         AWS_S3_PATH: 's3://buc121/File/'
-        FILE: 'demo-0.0.1-SNAPSHOT.jar'
+        FILE: '/home/runner/work/code/code/target/demo-0.0.1-SNAPSHOT.jar'
