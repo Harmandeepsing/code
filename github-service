@@ -9,7 +9,7 @@ WorkingDirectory=/home/ubuntu/github/workspace/target
 
 #path to executable. 
 #executable is a bash script which calls jar file
-ExecStart=/home/ubuntu/github/workspace/target/my-app
+ExecStart=/home/ubuntu/github/workspace/target/github-script.sh
 
 SuccessExitStatus=143
 TimeoutStopSec=10
