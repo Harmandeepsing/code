@@ -43,6 +43,6 @@ jobs:
           AWS_S3_BUCKET: 'buc121'
           AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_KEY }}
-          AWS_REGION: 'ap-south-1'
+          AWS_REGION: ap-south-1
           AWS_S3_PATH: 's3://buc121/File/'
           FILE: 'demo-0.0.1-SNAPSHOT.jar'
