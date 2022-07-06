@@ -27,9 +27,9 @@ jobs:
     - name: pwd
       run: ls -a target
       
-   # - name: Upload Maven build artifact
-    #  uses: actions/upload-artifact@v2
-   #   with:
-       #name: *
-       #path: /home/runner/work/code/code/target/*
+    - name: Upload Maven build artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: demo-0.0.1-SNAPSHOT.jar
+        path: /home/runner/work/code/code/target/demo-0.0.1-SNAPSHOT.jar
       
