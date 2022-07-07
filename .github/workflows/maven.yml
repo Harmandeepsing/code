@@ -28,7 +28,7 @@ jobs:
     - name: copy file via ssh key
       uses: appleboy/scp-action@master
       with:
-        host: 3.109.139.52
+        host: 15.207.72.205
         username: ubuntu
         port: 22
         key: ${{ secrets.KEY }}
