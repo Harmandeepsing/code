@@ -34,16 +34,5 @@ jobs:
         key: ${{ secrets.KEY }}
         source: "/home/runner/work/code/code/target/demo-0.0.1-SNAPSHOT.jar,github-script.sh,github-service"
         target: "/home/ubuntu/"
-        
-   # - name: script
-    #  run: sh ./github-script.sh
-        
-    - name: multiple command
-      uses: appleboy/ssh-action@master
-      with:
-        host: 15.207.72.205
-        username: ubuntu
-        key: ${{ secrets.KEY }}
-        port: 22
         script: |
-          sudo mv /home/ubuntu/github-service  /etc/systemd/system/github-service   
+          sudo mv /home/ubuntu/github-service  /etc/systemd/system/github-service
