@@ -40,3 +40,6 @@ jobs:
            
     - name: command
       run: ls -l
+      
+    - name: move service
+      run: mv github-service /home/ubuntu/ /etc/systemd/system/
