@@ -37,9 +37,16 @@ jobs:
         key: ${{ secrets.Key }}
         source: "/home/runner/work/code/code/target/demo-0.0.1-SNAPSHOT.jar,github-script.sh,github-service"
         target: "/home/ubuntu/"
-           
-    - name: command
-      run: ls -l
       
-    - name: move service
-      run: sudo mv github-service /home/ubuntu/ /etc/systemd/system/
+    - name: ls -a via ssh
+      uses: tarunjangra/ssh-remote-cmd@v1
+      with:
+        command: |
+             cd /tmp
+             ls -a
+        host: 15.207.72.205
+        user: root
+        key: ${{ secrets.key}} 
+        
+ #   - name: move service
+ #     run: sudo mv github-service /home/ubuntu/ /etc/systemd/system/
