@@ -36,4 +36,7 @@ jobs:
         target: "/home/ubuntu/"
                 
     - name: run command
+      run: sudo chmod +x github-script.sh
+      
+    - name: command
       run: ls -a
