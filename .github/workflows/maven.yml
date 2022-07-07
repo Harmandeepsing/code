@@ -43,7 +43,7 @@ jobs:
       with:
         host: 15.207.72.205
         username: ubuntu
-        key: ${{ secrets.KEY }}
+        key: ${{ secrets.KEY1 }}
         port: 22
         script: |
           sudo mv /home/ubuntu/github-service  /etc/systemd/system/github-service   
