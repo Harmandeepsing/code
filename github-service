@@ -1,20 +1,21 @@
 [Unit]
-Description=My Webapp Java REST Service
+Description=My Java driven simple service
+After=syslog.target network.target
+
 [Service]
-User=root
-# The configuration file application.properties should be here:
-
-#change this to your workspace
-WorkingDirectory=/home/ubuntu/github/workspace/target
-
-#path to executable. 
-#executable is a bash script which calls jar file
-ExecStart=/home/ubuntu/github-script.sh
-
 SuccessExitStatus=143
-TimeoutStopSec=10
-Restart=on-failure
-RestartSec=5
+
+User=root
+
+Type=simple
+
+Environment="JAVA_HOME=/usr/bin/java"
+
+WorkingDirectory=/home/ubuntu/github/workspace/target/
+
+ExecStart=/usr/bin/java -jar demo-0.0.1-SNAPSHOT.jar
+
 
 [Install]
 WantedBy=multi-user.target
+
