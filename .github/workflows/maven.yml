@@ -37,11 +37,13 @@ jobs:
         
    # - name: script
     #  run: sh ./github-script.sh
-
-    - name: ls -a via ssh
-      uses: garygrossgarten/github-action-ssh@release
+        
+    - name: multiple command
+      uses: appleboy/ssh-action@master
       with:
-        host: 15.207.72.205
+        host: 15.207.72.205}
         username: ubuntu
-        privateKey: ${{ secrets.KEY}}
-        command: sudo mv /home/ubuntu/github-service  /etc/systemd/system/github-service
+        key: ${{ secrets.KEY }}
+        port: 22
+        script: |
+          sudo mv /home/ubuntu/github-service  /etc/systemd/system/github-service   
