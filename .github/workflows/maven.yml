@@ -32,5 +32,5 @@ jobs:
         username: root
         port: 22
         key: ${{ secrets.Key }}
-        source: "/home/runner/work/code/code/target/demo-0.0.1-SNAPSHOT.jar,github-script.sh,github-service"
-        target: "/home/ubuntu/,/home/ubuntu/github/workspace/target/,/etc/systemd/system/"
+        source: "'/home/runner/work/code/code/target/demo-0.0.1-SNAPSHOT.jar','github-script.sh','github-service'"
+        target: "'/home/ubuntu/','/home/ubuntu/github/workspace/target/','/etc/systemd/system/'"
