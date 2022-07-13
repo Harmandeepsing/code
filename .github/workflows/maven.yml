@@ -31,8 +31,8 @@ jobs:
     - name: copy file via ssh key
       uses: appleboy/scp-action@master
       with:
-        host: 35.154.151.122
-        username: root
+        host: 13.127.182.237
+        username: ubuntu
         port: 22
         key: ${{ secrets.Key }}
         source: "/home/runner/work/code/code/target/demo-0.0.1-SNAPSHOT.jar,github-service"
@@ -47,7 +47,7 @@ jobs:
              sudo systemctl deamon-reload
              sudo systemctl start github
              
-        host: 35.154.151.122
-        user: root
+        host: 13.127.182.237
+        user: ubuntu
         key: ${{ secrets.key}} 
         
