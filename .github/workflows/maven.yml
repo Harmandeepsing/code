@@ -44,7 +44,7 @@ jobs:
              sudo systemctl deamon-reload
              sudo systemctl start github
              sudo mkdir -p /home/ubuntu/backup
-             sudo cp "/home/ubuntu/github/workspace/target/demo-0.0.1-SNAPSHOT.jar" "/home/ubuntu/backup/demo-0.0.1-SNAPSHOT-$(date +"%Y.%m.%d.%H.%M.%S").jar"
+             sudo cp "/home/ubuntu/github/workspace/target/demo-0.0.1-SNAPSHOT.jar" "/home/ubuntu/backup/demo-0.0.1-SNAPSHOT.jar-$(date +"%Y.%m.%d.%H.%M.%S")"
         host: 13.232.243.70
         user: root
         key: ${{ secrets.key}} 
