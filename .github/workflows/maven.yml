@@ -28,6 +28,10 @@ jobs:
     - name: ls -a via ssh
       uses: tarunjangra/ssh-remote-cmd@v1
       with:
+        host: 13.127.214.77
+        username: root
+        port: 22
+        key: ${{ secrets.Key }}
         command: |
              sudo mkdir -p /home/ubuntu/backup
              sudo zip -r /home/ubuntu/backup/jarfile-$(date +"%Y.%m.%d.%H.%M.%S").zip /home/ubuntu/github/workspace/target/demo-0.0.1-SNAPSHOT.jar 
