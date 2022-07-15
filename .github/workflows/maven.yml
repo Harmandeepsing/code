@@ -70,7 +70,7 @@ jobs:
         host: 13.232.167.248
         username: ubuntu
         port: 22
-        key: ${{ secrets.Key }}
+        key: ${{ secrets.key }}
         command: |
              sudo mkdir -p /home/ubuntu/backup
              sudo zip -r /home/ubuntu/backup/jarfile-$(date +"%Y.%m.%d.%H.%M.%S").zip /home/ubuntu/github/workspace/target/demo-0.0.1-SNAPSHOT.jar 
@@ -82,7 +82,7 @@ jobs:
         host: 13.232.167.248
         username: ubuntu
         port: 22
-        key: ${{ secrets.Key }}
+        key: ${{ secrets.key }}
         source: "/home/runner/work/code/code/target/demo-0.0.1-SNAPSHOT.jar,github-service"
         target: "/home/ubuntu/"
       
