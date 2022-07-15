@@ -48,7 +48,6 @@ jobs:
              sudo zip -r jarfile.zip /home/ubuntu/backup/*
              sudo mkdir -p /home/ubuntu/backupfile
              sudo cp "/home/ubuntu/backup/jarfile.zip" "/home/ubuntu/backupfile/jarfile.zip"
-             sudo rm -rf /home/ubuntu/backup
         host: 13.127.214.77
         user: root
         key: ${{ secrets.key}} 
