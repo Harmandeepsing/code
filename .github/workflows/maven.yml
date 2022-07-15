@@ -45,9 +45,9 @@ jobs:
              sudo systemctl start github
              sudo mkdir -p /home/ubuntu/backup
              sudo cp "/home/ubuntu/github/workspace/target/demo-0.0.1-SNAPSHOT.jar" "/home/ubuntu/backup/demo-0.0.1-SNAPSHOT-$(date +"%Y.%m.%d.%H.%M.%S").jar"
-             sudo zip -r jarfile.zip "/home/ubuntu/backup/demo-0.0.1-SNAPSHOT-$(date +"%Y.%m.%d.%H.%M.%S").jar"
+             sudo zip -r "/home/ubuntu/backup/jarfile.zip" "/home/ubuntu/backup/demo-0.0.1-SNAPSHOT-$(date +"%Y.%m.%d.%H.%M.%S").jar"
              sudo mkdir -p /home/ubuntu/backupfile
-             sudo cp jarfile.zip "/home/ubuntu/backupfile/jarfile.zip"
+             sudo cp "/home/ubuntu/backup/jarfile.zip" "/home/ubuntu/backupfile/jarfile.zip"
              sudo rm -rf /home/ubuntu/backup
         host: 13.127.214.77
         user: root
