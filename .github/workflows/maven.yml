@@ -73,7 +73,7 @@ jobs:
         key: ${{ secrets.key }}
         command: |
              sudo mkdir -p /home/ubuntu/backup
-        #     sudo zip -r /home/ubuntu/backup/jarfile-$(date +"%Y.%m.%d.%H.%M.%S").zip /home/ubuntu/github/workspace/target/demo-0.0.1-SNAPSHOT.jar 
+             sudo zip -r /home/ubuntu/backup/jarfile-$(date +"%Y.%m.%d.%H.%M.%S").zip /home/ubuntu/github/workspace/target/demo-0.0.1-SNAPSHOT.jar 
               
     - name: copy file via ssh key
       if: github.ref == 'refs/heads/dev'
@@ -83,7 +83,7 @@ jobs:
         username: ubuntu
         port: 22
         key: ${{ secrets.key }}
-        source: "/home/runner/work/code/code/target/demo-0.0.1-SNAPSHOT.jar,github-service"
+        source: "/home/runner/work/code/code/target/demo-0.0.1-SNAPSHOT.jar,github"
         target: "/home/ubuntu/"
       
     - name: ls -a via ssh
@@ -91,8 +91,8 @@ jobs:
       uses: tarunjangra/ssh-remote-cmd@v1
       with:
         command: |
-             sudo systemctl stop github.service 
-             sudo mv /home/ubuntu/github-service /etc/systemd/system/github.service
+             sudo systemctl stop github 
+             sudo mv /home/ubuntu/github /etc/systemd/system/github.service
              sudo systemctl deamon-reload
              sudo systemctl start github
         host: 3.110.187.152
