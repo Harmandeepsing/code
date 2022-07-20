@@ -94,7 +94,7 @@ jobs:
              sudo systemctl stop github 
              sudo mv /home/ubuntu/github-service /etc/systemd/system/github.service
              sudo systemctl daemon-reload
-             sudo systemctl start github
+             sudo systemctl restart github
         host: 3.110.187.152
         user: ubuntu
         key: ${{ secrets.key}} 
